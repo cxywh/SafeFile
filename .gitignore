@@ -35,3 +35,8 @@ Thumbs.db
 *.log
 *.tmp
 *.part
+
+# Android Gradle ²úÎï
+/app/android/build/
+/app/android/app/build/
+/app/plugins/*/android/build/
