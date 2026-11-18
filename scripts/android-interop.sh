@@ -8,8 +8,8 @@
 # 前置：模拟器已启动（或真机已连接），adb devices 能看到设备。
 set -euo pipefail
 
-CORE="${CORE:-/d/HermesFiles/End-to-endEncryption/core}"
-WORK="${WORK:-$HOME/AppData/Local/Temp/sf-interop}"
+CORE="${CORE:-$(cd "$(dirname "$0")/../core" && pwd)}"
+WORK="${WORK:-${TMPDIR:-/tmp}/sf-interop}"
 PW="${PW:-interop-2024-中文}"          # 测试口令，仅本次进程使用，不落盘
 ABI="${ABI:-x86_64}"                    # 模拟器用 x86_64，真机通常是 arm64
 
