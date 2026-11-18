@@ -1,0 +1,33 @@
+[package]
+name = "safefile-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "SafeFile 加密核心：XChaCha20-Poly1305 secretstream + Argon2id 流式文件加密"
+
+[dependencies]
+# libsodium 兼容的纯 Rust 实现（crypto_secretstream_xchacha20poly1305 / crypto_generichash）
+dryoc = { version = "2", default-features = false, features = ["std"] }
+# RFC 9106 Argon2id（纯 Rust，无 C 依赖，便于 Android 交叉编译）
+argon2 = { version = "0.6", default-features = false, features = ["alloc"] }
+zeroize = { version = "1.9", features = ["derive"] }
+# 操作系统 CSPRNG
+getrandom = "0.4"
+thiserror = "2"
+# 控制帧与元数据序列化
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# 每个文件的完整性摘要（BLAKE3，纯 Rust，多线程无关）
+blake3 = "1"
+if-addrs = "0.15.0"
+socket2 = { version = "0.6.5", features = ["all"] }
+zip = { version = "2", default-features = false, features = ["deflate"] }
+quick-xml = "0.37"
+pdf = "0.9"
+image = { version = "0.25.9", default-features = false, features = ["png", "jpeg", "gif", "webp", "bmp"] }
+encoding_rs = "0.8.35"
+
+[dev-dependencies]
+hex = "0.4"
+getrandom = "0.4"

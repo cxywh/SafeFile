@@ -1,0 +1,17 @@
+[package]
+name = "safefile-ffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "SafeFile 加密核心的 C ABI 桥接层（Flutter dart:ffi 调用）"
+
+[lib]
+name = "safefile_ffi"
+crate-type = ["cdylib", "staticlib", "rlib"]
+
+[dependencies]
+safefile-core = { path = "../safefile-core" }
+serde_json = "1"
+getrandom = "0.4"
+base64 = "0.23.1"

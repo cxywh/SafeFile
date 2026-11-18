@@ -1,0 +1,62 @@
+{
+  "total": 11,
+  "passed": 11,
+  "all_pass": true,
+  "checks": [
+    {
+      "name": "kdf_vector_matches_rust",
+      "pass": true,
+      "detail": "argon2-cffi=592555a93064d6ac… rust=592555a93064d6ac…"
+    },
+    {
+      "name": "rust_to_python[empty]",
+      "pass": true,
+      "detail": "sha=e3b0c44298fc1c14…"
+    },
+    {
+      "name": "python_to_rust[empty]",
+      "pass": true,
+      "detail": "文件名还原=空文件.bin"
+    },
+    {
+      "name": "rust_to_python[small]",
+      "pass": true,
+      "detail": "sha=7b69f09eea31623c…"
+    },
+    {
+      "name": "python_to_rust[small]",
+      "pass": true,
+      "detail": "文件名还原=小文件 ①——テスト.txt"
+    },
+    {
+      "name": "rust_to_python[chunked]",
+      "pass": true,
+      "detail": "sha=c6db07d0fde3dcd8…"
+    },
+    {
+      "name": "python_to_rust[chunked]",
+      "pass": true,
+      "detail": "文件名还原=大文件.bin"
+    },
+    {
+      "name": "rust_to_python[boundary]",
+      "pass": true,
+      "detail": "sha=aeb9126036cda6c6…"
+    },
+    {
+      "name": "python_to_rust[boundary]",
+      "pass": true,
+      "detail": "文件名还原=块边界.bin"
+    },
+    {
+      "name": "python_rejects_wrong_password",
+      "pass": true,
+      "detail": "nacl.exceptions.RuntimeError: Unexpected failure"
+    },
+    {
+      "name": "rust_rejects_wrong_password",
+      "pass": true,
+      "detail": "错误: 内部错误：部分文件处理失败 [internal]"
+    }
+  ]
+}
